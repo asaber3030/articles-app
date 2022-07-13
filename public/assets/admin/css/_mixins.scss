@@ -1,0 +1,72 @@
+@import "variables";
+
+@mixin boxShadow($blur: 10px, $color: #15181c) {
+  box-shadow: 0 2px $blur $color;
+}
+@mixin borderRadius($t: $border-radius, $r: $border-radius, $b: $border-radius, $l: $border-radius) {
+  border-radius: $t $r $b $l;
+}
+
+@mixin flexBox($justify-type: flex-start, $align-items-type: flex-start, $wrap-type: wrap) {
+  display: flex;
+  flex-wrap: #{$wrap-type};
+  justify-content: #{$justify-type};
+  align-items: #{$align-items-type};
+}
+
+@mixin transition($value: .25s ease-in-out) {
+  transition: $value;
+}
+
+@mixin bgOpacity($color, $value) {
+  background: transparentize($color, $value);
+}
+
+@mixin pseudo($display: block, $pos: absolute, $content: ''){
+  content: $content;
+  display: $display;
+  position: $pos;
+}
+
+@mixin truncate($truncation-boundary) {
+  max-width: $truncation-boundary !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+
+$breakpoints: (
+  "phone":        400px,
+  "phone-wide":   480px,
+  "phablet":      560px,
+  "tablet-small": 640px,
+  "tablet":       768px,
+  "tablet-wide":  1024px,
+  "desktop":      1248px,
+  "desktop-wide": 1440px
+);
+
+%ell {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+@mixin mediaQuery($width, $type: min) {
+  @if map_has_key($breakpoints, $width) {
+    $width: map_get($breakpoints, $width);
+    @if $type == max {
+      $width: $width - 1px;
+    }
+    @media only screen and (#{$type}-width: $width) {
+      @content;
+    }
+  }
+}
+
+.inverse-img {
+  filter: invert(1);
+}
+.transRotate {
+  transform: rotate(180deg);
+}

@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500&display=swap');
+$blue-light: #3498db;
+$blue-dark: #2980b9;
+
+$green-light: #2ecc71;
+$green-dark: #27ae60;
+
+
+$wet-light: #2d3748;
+$wet-dark: #1a202c;
+
+$red-light: #e74c3c;
+$red-dark: #9a6b3b;
+
+$yellow-light: #FF8F00;
+$yellow-dark: #FF6F00;
+
+$move-light: #9b59b6;
+$move-dark: #8e44ad;
+
+$teal-light: #1abc9c;
+$teal-dark: #16a085;
+
+$fb: #3b5998;
+$twitter: #1da1f2;
+$linkedin: #0077b5;
+
+$bg: #111;
+$bg-light: #222;
+$navbar-bg: #222;
+
+$padding: 10px;
+$margin: 10px;
+
+$border-radius: 5px;
+
+$main-font: 'Lato', sans-serif;
+
+$code-font: 'Fira Code', monospace;
+
+.red-c {
+  color: $red-dark !important;
+}
+.blue-c {
+  color: $blue-dark !important;
+}
+.green-c {
+  color: $green-dark !important;
+}
+.yellow-c {
+  color: $yellow-dark !important;
+}
+.wet-c {
+  color: $wet-dark !important;
+}
+.pink-c {
+  color: $move-dark !important;
+}
+
+.red-border {
+  border: 1px solid $red-dark !important;
+}
+.blue-border {
+  border: 1px solid $blue-dark !important;
+}
+.yellow-border {
+  border: 1px solid $yellow-dark !important;
+}
+.wet-border {
+  border: 1px solid $wet-dark !important;
+}
+.pink-border {
+  border: 1px solid $move-dark !important;
+}
